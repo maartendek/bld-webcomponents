@@ -1,0 +1,89 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MyAwesomeCounter",
+          "declaration": {
+            "name": "MyAwesomeCounter",
+            "module": "./MyAwesomeCounter.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/my-awesome-counter.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "my-awesome-counter",
+          "declaration": {
+            "name": "MyAwesomeCounter",
+            "module": "/src/MyAwesomeCounter.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/MyAwesomeCounter.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "MyAwesomeCounter",
+          "members": [
+            {
+              "kind": "field",
+              "name": "count",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Hey there'",
+              "attribute": "count"
+            },
+            {
+              "kind": "field",
+              "name": "onClick",
+              "default": "(e: Event): void => {\n    // console.log('slot', this.host.shadowRoot.querySelector(\"#my-button slot\").innerHTML);\n    // const name: string = this.host.shadowRoot.querySelector(\"#my-button slot\").innerHTML;\n    const name: string = 'Martin';\n    alert(`${this.count} ${name}`);\n  }"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "count",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Hey there'",
+              "fieldName": "count"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "my-awesome-counter",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MyAwesomeCounter",
+          "declaration": {
+            "name": "MyAwesomeCounter",
+            "module": "src/MyAwesomeCounter.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
