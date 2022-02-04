@@ -8,6 +8,10 @@ export class MyAwesomeCounter extends LitElement {
       font-size: 200%;
     }
 
+    :host h2 {
+      color: blue;
+    }
+
     :host span {
       width: 4rem;
       display: inline-block;

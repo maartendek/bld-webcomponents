@@ -27,6 +27,10 @@ MyAwesomeCounter.styles = css `
       font-size: 200%;
     }
 
+    :host h2 {
+      color: blue;
+    }
+
     :host span {
       width: 4rem;
       display: inline-block;

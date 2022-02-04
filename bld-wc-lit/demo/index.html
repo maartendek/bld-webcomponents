@@ -6,6 +6,9 @@
     body {
       background: #fafafa;
     }
+    h2 {
+      color: red;
+    }
   </style>
 </head>
 <body>
@@ -19,7 +22,7 @@
 
     render(
       html`
-      <my-awesome-counter>
+      <my-awesome-counter count=2>
         <h2 slot="counter-title">test</h2>
       </my-awesome-counter>
       `,
