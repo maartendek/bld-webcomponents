@@ -7,6 +7,11 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MyAwesomeCounter {
+        /**
+          * The actual count
+         */
+        "count": number;
+        "invert": () => Promise<void>;
     }
 }
 declare global {
@@ -22,6 +27,10 @@ declare global {
 }
 declare namespace LocalJSX {
     interface MyAwesomeCounter {
+        /**
+          * The actual count
+         */
+        "count"?: number;
     }
     interface IntrinsicElements {
         "my-awesome-counter": MyAwesomeCounter;

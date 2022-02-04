@@ -1,4 +1,4 @@
-import { Component, State, Host, h, Element } from '@stencil/core';
+import { Component,  Host, h, Element, Prop, Method } from '@stencil/core';
 
 @Component({
   tag: 'my-awesome-counter',
@@ -11,7 +11,7 @@ export class MyAwesomeCounter {
   /**
    * The actual count
    */
-  @State() count: number = 0;
+  @Prop({reflect: true, mutable: true }) count: number = 0;
 
   onIncrease = (): void => {
     ++this.count;
@@ -23,6 +23,11 @@ export class MyAwesomeCounter {
 
   componentDidLoad() {
     console.log('did load', this.host);
+  }
+
+  @Method()
+  async invert() {
+    this.count = this.count * -1;
   }
 
   render() {
