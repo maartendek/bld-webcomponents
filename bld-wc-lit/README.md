@@ -1,12 +1,9 @@
 # \<my-awesome-counter>
 
+
+This is a stenciljs counter component used in the Bld() tech talk [The Ins and Outs of Web Components](https://www.meetup.com/bld-tech-talks/events/283680822/).
+
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
-
-## Installation
-
-```bash
-npm i my-awesome-counter
-```
 
 ## Usage
 
