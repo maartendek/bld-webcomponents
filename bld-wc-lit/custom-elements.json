@@ -45,24 +45,29 @@
               "kind": "field",
               "name": "count",
               "type": {
-                "text": "string"
+                "text": "number"
               },
-              "default": "'Hey there'",
+              "default": "0",
               "attribute": "count"
             },
             {
               "kind": "field",
-              "name": "onClick",
-              "default": "(e: Event): void => {\n    // console.log('slot', this.host.shadowRoot.querySelector(\"#my-button slot\").innerHTML);\n    // const name: string = this.host.shadowRoot.querySelector(\"#my-button slot\").innerHTML;\n    const name: string = 'Martin';\n    alert(`${this.count} ${name}`);\n  }"
+              "name": "onIncrease",
+              "default": "(): void => {\n    ++this.count;\n  }"
+            },
+            {
+              "kind": "field",
+              "name": "onDecrease",
+              "default": "() => {\n    --this.count;\n  }"
             }
           ],
           "attributes": [
             {
               "name": "count",
               "type": {
-                "text": "string"
+                "text": "number"
               },
-              "default": "'Hey there'",
+              "default": "0",
               "fieldName": "count"
             }
           ],
