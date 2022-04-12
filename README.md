@@ -1,3 +1,3 @@
 # bld-webcomponents
-## Web Components with libraries
-For the BLD() presentation of March 15 2022
+## Ins and Outs of Web Components
+For the BLD() presentation of April 12 2022
